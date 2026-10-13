@@ -1,50 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Assignment Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 30px; background: #f4f6f8; color: #333; }
-        .container { max-width: 950px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h1, h2 { color: #1a2a3a; }
-        iframe { width: 100%; height: 550px; border: 1px solid #ddd; border-radius: 6px; margin-top: 15px; }
-        .btn { display: inline-block; padding: 10px 18px; background: #0969da; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px; font-weight: bold; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Data Analysis Portfolio | Kanchi Singhal</title>
+  <style>
+    :root {
+      --primary: #1a2a3a;
+      --accent: #0969da;
+      --bg: #f4f6f8;
+      --card-bg: #ffffff;
+      --border: #ddd;
+      --text: #333333;
+      --text-muted: #666666;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 30px 15px;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      color: var(--primary);
+      margin: 0 0 5px 0;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    nav {
+      background: #eef2f5;
+      padding: 10px 15px;
+      border-radius: 6px;
+      margin-bottom: 30px;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 0;
+    }
+
+    h3 {
+      color: var(--accent);
+      margin-top: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 550px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-top: 15px;
+    }
+
+    figure {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    figure img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    figcaption {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .kpi-card {
+      background: #f8fafc;
+      padding: 15px;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+
+    .kpi-card strong {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    .kpi-card span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    th {
+      background: #f0f4f8;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #0451a5;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Urban Data Analysis Portfolio</h1>
-        <p><strong>Student Name:</strong> Kanchi Singhal</p>
 
-        <hr>
+  <div class="container">
 
-        <!-- QUESTION 1 -->
-        <section>
-            <h2>Question 1: Geotagged Photo Location Mapping</h2>
-            <p>This project extracts EXIF spatial metadata from photo sets, parses decimal degrees for coordinates, and outputs interactive spatial layers along with a GeoPackage file.</p>
+    <header>
+      <h1>Urban Data Analysis Portfolio</h1>
+      <p class="subtitle">Course Submissions for Spatial Web Mapping & Google Earth Engine Analysis</p>
+    </header>
 
-            <h3>Interactive Map Output:</h3>
-            <!-- Embedded Map -->
-            <iframe src="waste_bin_map.html"></iframe>
-        </section>
+    <nav>
+      <a href="#question1">Question 1: Waste Bin Mapping</a>
+      <a href="#question2">Question 2: Mysuru Urban Sprawl (GEE)</a>
+    </nav>
 
-        <hr>
+    <!-- ================================================================= -->
+    <!-- QUESTION 1 SECTION                                                 -->
+    <!-- ================================================================= -->
+    <section id="question1">
+      <h2>Question 1 · Interactive Spatial Web Map</h2>
+      <p>
+        <strong>Task Overview:</strong> Interactive geospatial mapping interface for waste management locations and spatial infrastructure visualization.
+      </p>
 
-        <!-- QUESTION 2 -->
-        <section>
-            <h2>Question 2: Spatial Analysis & Discussion</h2>
-            <p>Add your written discussion and analysis for Question 2 here.</p>
-        </section>
+      <!-- Embedded Interactive Map for Q1 -->
+      <iframe src="waste_bin_map.html" title="Interactive Waste Bin Map"></iframe>
 
-        <hr>
+      <div>
+        <a class="btn" href="waste_bin_map.html" target="_blank">Open Map Fullscreen</a>
+        <a class="btn" href="HS25M105-TEST-2-QUES-1.ipynb" download>Download Q1 Notebook</a>
+      </div>
+    </section>
 
-        <!-- CODE LINK -->
-        <section>
-            <h2>Code Repository</h2>
-            <p>Access the full Python source code and execution notebooks below:</p>
-            <a class="btn" href="https://github.com/Kanchisinghal-git/URBAN-ASSIGNMENT" target="_blank">View GitHub Repository</a>
-        </section>
-    </div>
+    <!-- ================================================================= -->
+    <!-- QUESTION 2 SECTION                                                 -->
+    <!-- ================================================================= -->
+    <section id="question2">
+      <h2>Question 2 · Google Earth Engine Urban Analysis (Mysuru)</h2>
+      <p>
+        <strong>Research Focus:</strong> Quantitative evaluation of urban built-up surface expansion and tree cover dynamics in Mysuru, India (2018–2025) using Google Dynamic World (10m LULC) and JRC GHSL reference data.
+      </p>
+
+      <!-- Headline Statistics Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <strong>449.69 km²</strong>
+          <span>Built Area (2018)</span>
+        </div>
+        <div class="kpi-card">
+          <strong>595.02 km²</strong>
+          <span>Built Area (2025)</span>
+        </div>
+        <div class="kpi-card">
+          <strong>+145.33 km²</strong>
+          <span>Net Expansion</span>
+        </div>
+        <div class="kpi-card">
+          <strong>+32.32%</strong>
+          <span>Growth Rate</span>
+        </div>
+      </div>
+
+      <!-- 1. Static Change Map -->
+      <h3>1. Spatial Patterns & Change Hotspot Map</h3>
+      <p>
+        The static change map combines baseline land cover from 2018 with 2025 observations. Logical Boolean image masking isolates new built expansion hotspots (Red) and tree canopy loss (Yellow) against existing urban territory (Dark Gray) and retained baseline tree canopy (Forest Green).
+      </p>
+      <figure>
+        <img src="mysuru-map.png" alt="Mysuru Built Expansion vs Tree Loss Map (2018-2025)">
+        <figcaption>Figure 1: Mysuru LULC static change map showing urban expansion hotspots and tree cover loss between 2018 and 2025.</figcaption>
+      </figure>
+
+      <!-- 2. Dynamic Animation -->
+      <h3>2. Dynamic Temporal Evolution (2018–2025)</h3>
+      <p>
+        An annual mode composite was computed for each year between 2018 and 2025 using a consistent dry-season temporal filter (January 1 – April 30) to generate a seamless dynamic time slider.
+      </p>
+      <figure>
+        <img src="mysuru_land_built_change_gif.gif" alt="Mysuru Annual Dynamic World LULC Time Slider Animation">
+        <figcaption>Figure 2: Animated time-series evolution showing outward suburban expansion across Mysuru district over seven years.</figcaption>
+      </figure>
+
+      <!-- 3. Quantitative Results & Chart -->
+      <h3>3. Quantitative Summary & Trend Analysis</h3>
+      <figure>
+        <img src="mysuru_lulc_trend_chart.png" alt="Mysuru LULC Comparison Chart 2018 vs 2025">
+        <figcaption>Figure 3: Total area comparison (km²) between urban built surface and tree cover canopy.</figcaption>
+      </figure>
+
+      <table>
+        <thead>
+          <tr>
+            <th>LULC Indicator / Class</th>
+            <th>2018 Baseline</th>
+            <th>2025 Evaluation</th>
+            <th>Net Area Change</th>
+            <th>Percentage Change (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Built Surface Area</td>
+            <td>449.69 km²</td>
+            <td>595.02 km²</td>
+            <td>+145.33 km²</td>
+            <td>+32.32%</td>
+          </tr>
+          <tr>
+            <td>Tree Canopy Cover</td>
+            <td>1,863.36 km²</td>
+            <td>2,451.30 km²</td>
+            <td>+587.94 km²</td>
+            <td>+31.55%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 4. Academic Discussion & Limitations -->
+      <h3>4. Discussion & Methodological Limitations</h3>
+      <p>
+        <strong>Spatial Growth Patterns:</strong> Urban expansion in Mysuru exhibits a clear radial-concentric growth pattern centered around the municipal core, with significant acceleration along major transport corridors such as the Outer Ring Road and the Bengaluru-Mysuru highway. Peripheral conversion primarily replaces fragmented scrublands and peri-urban vegetation layouts with commercial and residential structures.
+      </p>
+
+      <p>
+        <strong>Methodological Limitations & Dataset Constraints:</strong>
+      </p>
+      <ul>
+        <li><strong>Spatial Resolution (10m vs. Coarse Grids):</strong> Dynamic World utilizes 10-meter optical imagery from Copernicus Sentinel-2. While highly effective for contiguous built structures, individual buildings or narrow rural access roads fall below pixel resolution limits.</li>
+        <li><strong>Consistent Seasonal Window:</strong> A fixed annual filter window (Jan 1 – Apr 30) was applied to avoid false land cover transitions caused by monsoon-driven vegetation green-up and persistent cloud cover.</li>
+        <li><strong>Spectral Class Confusion:</strong> Dense tree canopy plots, horticultural farms, and urban parks can occasionally share spectral similarities with general vegetative categories depending on solar zenith angles during satellite acquisition passes.</li>
+      </ul>
+
+      <p>
+        <strong>Citations & Boundary Sources:</strong><br>
+        • <strong>City Boundary:</strong> FAO GAUL 2015 Level-2 Administrative Boundary for Mysuru District.<br>
+        • <strong>Primary Dataset:</strong> Google Dynamic World 10m Near Real-Time LULC (<code>GOOGLE/DYNAMICWORLD/V1</code>).<br>
+        • <strong>Structural Validation:</strong> European Commission JRC Global Human Settlement Layer (<code>JRC/GHSL/P2023A/GHS_BUILT_S</code>).
+      </p>
+
+      <div>
+        <a class="btn" href="downloads/mysuru_urban_statistics.csv" download>Download Mysuru Statistics (CSV)</a>
+      </div>
+    </section>
+
+    <footer>
+      Urban GIS & Remote Sensing Submission · Kanchi Singhal
+    </footer>
+
+  </div>
+
 </body>
 </html>
