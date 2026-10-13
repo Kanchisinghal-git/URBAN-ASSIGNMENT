@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7ce5a30f6e364b5ae3e5d92cb647e3ed {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7ce5a30f6e364b5ae3e5d92cb647e3ed" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7ce5a30f6e364b5ae3e5d92cb647e3ed = L.map(
+                "map_7ce5a30f6e364b5ae3e5d92cb647e3ed",
+                {
+                    center: [13.712000784730286, 79.59142639628472],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 18,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_7ce5a30f6e364b5ae3e5d92cb647e3ed);
+
+            
+
+        
+    
+            var tile_layer_287d1864d2f49cec8ad44d5bce6fe54a = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u0026copy; OpenStreetMap \u0026copy; CARTO",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_287d1864d2f49cec8ad44d5bce6fe54a.addTo(map_7ce5a30f6e364b5ae3e5d92cb647e3ed);
+        
+    
+            var tile_layer_fefefcc9ec8c4b87fde6923336674518 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri Satellite",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fefefcc9ec8c4b87fde6923336674518.addTo(map_7ce5a30f6e364b5ae3e5d92cb647e3ed);
+        
+    
+            var marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_a3563ae6a7ef3c4441aeaebbc2cff37c = L.marker(
+                [13.715766951703335, 79.59187026987154],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_5a2f82b9839df51e641d1c080fcf4dec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2efd08168e873643f587ded169ea3ebf = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_53124bd128e440299b04b32e33765292 = $(`<div id="html_53124bd128e440299b04b32e33765292" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             1         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-04 09:42:10.744000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260904094224653.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260904094224653.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_2efd08168e873643f587ded169ea3ebf.setContent(html_53124bd128e440299b04b32e33765292);
+            
+        
+
+        marker_a3563ae6a7ef3c4441aeaebbc2cff37c.bindPopup(popup_2efd08168e873643f587ded169ea3ebf)
+        ;
+
+        
+    
+    
+            marker_a3563ae6a7ef3c4441aeaebbc2cff37c.bindTooltip(
+                `<div>
+                     1 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a3563ae6a7ef3c4441aeaebbc2cff37c.setIcon(icon_5a2f82b9839df51e641d1c080fcf4dec);
+            
+    
+            var marker_2a76874a2f980e248edea1e8bd3d1516 = L.marker(
+                [13.714554999999995, 79.59419333333334],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_e47af8d71072c46da29efeb0ea48d991 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f97711e5c3d6737b1ed9f9c2c20f90b6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6c446407934c784b569a94dba5a8e966 = $(`<div id="html_6c446407934c784b569a94dba5a8e966" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             2         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-04 09:56:10.095000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260904095625355.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260904095625355.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_f97711e5c3d6737b1ed9f9c2c20f90b6.setContent(html_6c446407934c784b569a94dba5a8e966);
+            
+        
+
+        marker_2a76874a2f980e248edea1e8bd3d1516.bindPopup(popup_f97711e5c3d6737b1ed9f9c2c20f90b6)
+        ;
+
+        
+    
+    
+            marker_2a76874a2f980e248edea1e8bd3d1516.bindTooltip(
+                `<div>
+                     2 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2a76874a2f980e248edea1e8bd3d1516.setIcon(icon_e47af8d71072c46da29efeb0ea48d991);
+            
+    
+            var marker_c9ce9f72b1c5bd2a9c7ebfbd5cfc92a2 = L.marker(
+                [13.716983333333333, 79.59168833333334],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_bed36d013a379630df2ebdcac33a0eec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ba6b52e82e89265a362155edd0d0b55 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b7f8b0abc9a5b645be45850e36f2cd06 = $(`<div id="html_b7f8b0abc9a5b645be45850e36f2cd06" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             3         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single Dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-04 10:10:14.297000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260904101027066.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260904101027066.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_1ba6b52e82e89265a362155edd0d0b55.setContent(html_b7f8b0abc9a5b645be45850e36f2cd06);
+            
+        
+
+        marker_c9ce9f72b1c5bd2a9c7ebfbd5cfc92a2.bindPopup(popup_1ba6b52e82e89265a362155edd0d0b55)
+        ;
+
+        
+    
+    
+            marker_c9ce9f72b1c5bd2a9c7ebfbd5cfc92a2.bindTooltip(
+                `<div>
+                     3 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c9ce9f72b1c5bd2a9c7ebfbd5cfc92a2.setIcon(icon_bed36d013a379630df2ebdcac33a0eec);
+            
+    
+            var marker_3b5d10bab3ea5b7cd22aed3f956b6d58 = L.marker(
+                [13.715017249149087, 79.5910450349715],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_2c70a064369b184a87b80a20964e0bd5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4de1fc3c892606f687556780ee811602 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e94ddda6bfb6687dcd0201c6a46ff209 = $(`<div id="html_e94ddda6bfb6687dcd0201c6a46ff209" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             4         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-04 10:49:47.059000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260904105020678.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260904105020678.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_4de1fc3c892606f687556780ee811602.setContent(html_e94ddda6bfb6687dcd0201c6a46ff209);
+            
+        
+
+        marker_3b5d10bab3ea5b7cd22aed3f956b6d58.bindPopup(popup_4de1fc3c892606f687556780ee811602)
+        ;
+
+        
+    
+    
+            marker_3b5d10bab3ea5b7cd22aed3f956b6d58.bindTooltip(
+                `<div>
+                     4 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3b5d10bab3ea5b7cd22aed3f956b6d58.setIcon(icon_2c70a064369b184a87b80a20964e0bd5);
+            
+    
+            var marker_f962f77c9f2d116f91f41687972a6eb1 = L.marker(
+                [13.714266666666662, 79.59013333333334],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_bc9e6956e40582a52380d9dcbe9d4de8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fea05f01e23c8e0fbf9a9c96a2e72889 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6735c494e9e52da9b0714a908f9d9318 = $(`<div id="html_6735c494e9e52da9b0714a908f9d9318" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             5         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-04 10:54:36.094000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260904105448916.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260904105448916.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_fea05f01e23c8e0fbf9a9c96a2e72889.setContent(html_6735c494e9e52da9b0714a908f9d9318);
+            
+        
+
+        marker_f962f77c9f2d116f91f41687972a6eb1.bindPopup(popup_fea05f01e23c8e0fbf9a9c96a2e72889)
+        ;
+
+        
+    
+    
+            marker_f962f77c9f2d116f91f41687972a6eb1.bindTooltip(
+                `<div>
+                     5 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f962f77c9f2d116f91f41687972a6eb1.setIcon(icon_bc9e6956e40582a52380d9dcbe9d4de8);
+            
+    
+            var marker_5aeaae32a626c00691d1f0272593c4d8 = L.marker(
+                [13.714519999999998, 79.58959999999998],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_54e01fff426852a061f2a12d87ee5eb5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd88ae0b4106fbabcf1c46c78abb5488 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_bfe88e938a7a8833ceade9ef98a12335 = $(`<div id="html_bfe88e938a7a8833ceade9ef98a12335" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             6         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-04 10:55:55.272000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260904105603476.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260904105603476.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_bd88ae0b4106fbabcf1c46c78abb5488.setContent(html_bfe88e938a7a8833ceade9ef98a12335);
+            
+        
+
+        marker_5aeaae32a626c00691d1f0272593c4d8.bindPopup(popup_bd88ae0b4106fbabcf1c46c78abb5488)
+        ;
+
+        
+    
+    
+            marker_5aeaae32a626c00691d1f0272593c4d8.bindTooltip(
+                `<div>
+                     6 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5aeaae32a626c00691d1f0272593c4d8.setIcon(icon_54e01fff426852a061f2a12d87ee5eb5);
+            
+    
+            var marker_49cd67bf9ded69537437ac705f8b6954 = L.marker(
+                [13.706613333333332, 79.59446166666666],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_4028d32c1cc916bbb8cdf5aa1721c2c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f35289c0a97d8de01aafc6ac79dfc0c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7e933c9f4560fd1a295f56460b916c8b = $(`<div id="html_7e933c9f4560fd1a295f56460b916c8b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             29         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Triple Segregated         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-04 11:10:34.446000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260904111042649.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260904111042649.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_8f35289c0a97d8de01aafc6ac79dfc0c.setContent(html_7e933c9f4560fd1a295f56460b916c8b);
+            
+        
+
+        marker_49cd67bf9ded69537437ac705f8b6954.bindPopup(popup_8f35289c0a97d8de01aafc6ac79dfc0c)
+        ;
+
+        
+    
+    
+            marker_49cd67bf9ded69537437ac705f8b6954.bindTooltip(
+                `<div>
+                     29 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_49cd67bf9ded69537437ac705f8b6954.setIcon(icon_4028d32c1cc916bbb8cdf5aa1721c2c7);
+            
+    
+            var marker_455386962dc89de66ee1898dd3439dbc = L.marker(
+                [13.707066666666664, 79.59452166666664],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_31aae5f4efdf6c38d13c20473238ab99 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_00806b12fa4b2c8e0842aa15a7140ed2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_facd3a9be0a37fe733abc7ae1672937f = $(`<div id="html_facd3a9be0a37fe733abc7ae1672937f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             30         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Triple Segregated          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-04 11:11:36.840000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260904111147295.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260904111147295.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_00806b12fa4b2c8e0842aa15a7140ed2.setContent(html_facd3a9be0a37fe733abc7ae1672937f);
+            
+        
+
+        marker_455386962dc89de66ee1898dd3439dbc.bindPopup(popup_00806b12fa4b2c8e0842aa15a7140ed2)
+        ;
+
+        
+    
+    
+            marker_455386962dc89de66ee1898dd3439dbc.bindTooltip(
+                `<div>
+                     30 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_455386962dc89de66ee1898dd3439dbc.setIcon(icon_31aae5f4efdf6c38d13c20473238ab99);
+            
+    
+            var marker_f49668eac7ec33943bbf07cefc4f6fd8 = L.marker(
+                [13.707648333333337, 79.59438],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_8cbc574ec9f4f5315d9c7a4c726c32e9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3eb7e0fc7224cbdbfd047932fe1675cd = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f53fd1376c20384bf9c631602a8f6a0b = $(`<div id="html_f53fd1376c20384bf9c631602a8f6a0b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             31         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Double Segregated          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-04 11:12:53.750000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260904111302744.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260904111302744.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_3eb7e0fc7224cbdbfd047932fe1675cd.setContent(html_f53fd1376c20384bf9c631602a8f6a0b);
+            
+        
+
+        marker_f49668eac7ec33943bbf07cefc4f6fd8.bindPopup(popup_3eb7e0fc7224cbdbfd047932fe1675cd)
+        ;
+
+        
+    
+    
+            marker_f49668eac7ec33943bbf07cefc4f6fd8.bindTooltip(
+                `<div>
+                     31 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f49668eac7ec33943bbf07cefc4f6fd8.setIcon(icon_8cbc574ec9f4f5315d9c7a4c726c32e9);
+            
+    
+            var marker_e69869e80d27cfbed4cf1655ee0b6add = L.marker(
+                [13.706598941927197, 79.59489781686602],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_2b1041665d6fcaf75f8ae9328cd01a27 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b230d858a332d0a37d88ef9daa2671e4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_86880731a0c3b3df272d02ce0274d901 = $(`<div id="html_86880731a0c3b3df272d02ce0274d901" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             28         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-04 14:34:32.922000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260904143445083.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260904143445083.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_b230d858a332d0a37d88ef9daa2671e4.setContent(html_86880731a0c3b3df272d02ce0274d901);
+            
+        
+
+        marker_e69869e80d27cfbed4cf1655ee0b6add.bindPopup(popup_b230d858a332d0a37d88ef9daa2671e4)
+        ;
+
+        
+    
+    
+            marker_e69869e80d27cfbed4cf1655ee0b6add.bindTooltip(
+                `<div>
+                     28 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e69869e80d27cfbed4cf1655ee0b6add.setIcon(icon_2b1041665d6fcaf75f8ae9328cd01a27);
+            
+    
+            var marker_3b36f093ea379cb294dc7803d92a54c5 = L.marker(
+                [13.708236595966758, 79.59493833749913],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_a1faf3ab246757b24cdc3af55b697dc6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a76cab04f5ad0ce46e8837f787042b0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ec666df96449585bf23116ebfcb76338 = $(`<div id="html_ec666df96449585bf23116ebfcb76338" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             34         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 10:36:36.736000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905103648861.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905103648861.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_4a76cab04f5ad0ce46e8837f787042b0.setContent(html_ec666df96449585bf23116ebfcb76338);
+            
+        
+
+        marker_3b36f093ea379cb294dc7803d92a54c5.bindPopup(popup_4a76cab04f5ad0ce46e8837f787042b0)
+        ;
+
+        
+    
+    
+            marker_3b36f093ea379cb294dc7803d92a54c5.bindTooltip(
+                `<div>
+                     34 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3b36f093ea379cb294dc7803d92a54c5.setIcon(icon_a1faf3ab246757b24cdc3af55b697dc6);
+            
+    
+            var marker_9fd086eae1dbedf99aa0cf1a67423ef5 = L.marker(
+                [13.70819517821068, 79.59501714037472],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_05f247ecc0d7e502d9f9cbcc993ea7b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_200c6e8cff6d3dfdd949c39c9ecf4bbc = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8768dd5cf08b49fe1ccbbdadbe85442e = $(`<div id="html_8768dd5cf08b49fe1ccbbdadbe85442e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             33         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 10:37:03.239000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905103710979.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905103710979.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_200c6e8cff6d3dfdd949c39c9ecf4bbc.setContent(html_8768dd5cf08b49fe1ccbbdadbe85442e);
+            
+        
+
+        marker_9fd086eae1dbedf99aa0cf1a67423ef5.bindPopup(popup_200c6e8cff6d3dfdd949c39c9ecf4bbc)
+        ;
+
+        
+    
+    
+            marker_9fd086eae1dbedf99aa0cf1a67423ef5.bindTooltip(
+                `<div>
+                     33 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9fd086eae1dbedf99aa0cf1a67423ef5.setIcon(icon_05f247ecc0d7e502d9f9cbcc993ea7b2);
+            
+    
+            var marker_5219f0d497eb834f60c2dc0815438ba5 = L.marker(
+                [13.708211666666667, 79.59488499999998],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_6940f0f2b60d9f4e89f56fc6e37f2d41 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0da0b7576e7ea915a9920254588fb4bb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5549ef02381f2d2f49ef994656c4a46e = $(`<div id="html_5549ef02381f2d2f49ef994656c4a46e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             32         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 10:39:36.642000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905103946583.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905103946583.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_0da0b7576e7ea915a9920254588fb4bb.setContent(html_5549ef02381f2d2f49ef994656c4a46e);
+            
+        
+
+        marker_5219f0d497eb834f60c2dc0815438ba5.bindPopup(popup_0da0b7576e7ea915a9920254588fb4bb)
+        ;
+
+        
+    
+    
+            marker_5219f0d497eb834f60c2dc0815438ba5.bindTooltip(
+                `<div>
+                     32 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5219f0d497eb834f60c2dc0815438ba5.setIcon(icon_6940f0f2b60d9f4e89f56fc6e37f2d41);
+            
+    
+            var marker_cbc736c9275e076b53df882e2745f4f8 = L.marker(
+                [13.718020000000001, 79.58720666666666],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_49091de0eb8d20d87048be4e48c78a3c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c9e29f5f165b5a4e247715cedce3f758 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_dee9d22fe614085ce5271598e8fdefa0 = $(`<div id="html_dee9d22fe614085ce5271598e8fdefa0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             11         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:14:06.372000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905121416562.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905121416562.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_c9e29f5f165b5a4e247715cedce3f758.setContent(html_dee9d22fe614085ce5271598e8fdefa0);
+            
+        
+
+        marker_cbc736c9275e076b53df882e2745f4f8.bindPopup(popup_c9e29f5f165b5a4e247715cedce3f758)
+        ;
+
+        
+    
+    
+            marker_cbc736c9275e076b53df882e2745f4f8.bindTooltip(
+                `<div>
+                     11 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cbc736c9275e076b53df882e2745f4f8.setIcon(icon_49091de0eb8d20d87048be4e48c78a3c);
+            
+    
+            var marker_2654881527d8b519edb9a8696213f2a0 = L.marker(
+                [13.717675000000003, 79.58682],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_4ad6313f91cef40bcc5fb241124a7338 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_857625931537ce3faa0cae2eb2830b75 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_28695210a331992cedfd45ba6c83be44 = $(`<div id="html_28695210a331992cedfd45ba6c83be44" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             15         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:16:51.288000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905121701211.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905121701211.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_857625931537ce3faa0cae2eb2830b75.setContent(html_28695210a331992cedfd45ba6c83be44);
+            
+        
+
+        marker_2654881527d8b519edb9a8696213f2a0.bindPopup(popup_857625931537ce3faa0cae2eb2830b75)
+        ;
+
+        
+    
+    
+            marker_2654881527d8b519edb9a8696213f2a0.bindTooltip(
+                `<div>
+                     15 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2654881527d8b519edb9a8696213f2a0.setIcon(icon_4ad6313f91cef40bcc5fb241124a7338);
+            
+    
+            var marker_4811b18d087f7d64cd52d8657b927c30 = L.marker(
+                [13.717603333333328, 79.586945],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_2fa3bc1a24d4eff25575dc482297c3c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f41e0ccc7acc0571befe8ad54aa6a315 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e9ad19407ae2bc5fefc5923ed3d26e94 = $(`<div id="html_e9ad19407ae2bc5fefc5923ed3d26e94" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             14         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:17:48.445000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905121756486.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905121756486.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_f41e0ccc7acc0571befe8ad54aa6a315.setContent(html_e9ad19407ae2bc5fefc5923ed3d26e94);
+            
+        
+
+        marker_4811b18d087f7d64cd52d8657b927c30.bindPopup(popup_f41e0ccc7acc0571befe8ad54aa6a315)
+        ;
+
+        
+    
+    
+            marker_4811b18d087f7d64cd52d8657b927c30.bindTooltip(
+                `<div>
+                     14 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4811b18d087f7d64cd52d8657b927c30.setIcon(icon_2fa3bc1a24d4eff25575dc482297c3c7);
+            
+    
+            var marker_1932930d44fcd9032c0d8386eb4b8f30 = L.marker(
+                [13.717299999999994, 79.58652666666666],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_1fe827d069eba3821e981b763adffa5a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fafd46455f7359f9adb8fe8aff67e196 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9426a0d1aa6c7b0c708469dfe684d5fa = $(`<div id="html_9426a0d1aa6c7b0c708469dfe684d5fa" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             16         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:19:33.840000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905121951209.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905121951209.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_fafd46455f7359f9adb8fe8aff67e196.setContent(html_9426a0d1aa6c7b0c708469dfe684d5fa);
+            
+        
+
+        marker_1932930d44fcd9032c0d8386eb4b8f30.bindPopup(popup_fafd46455f7359f9adb8fe8aff67e196)
+        ;
+
+        
+    
+    
+            marker_1932930d44fcd9032c0d8386eb4b8f30.bindTooltip(
+                `<div>
+                     16 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1932930d44fcd9032c0d8386eb4b8f30.setIcon(icon_1fe827d069eba3821e981b763adffa5a);
+            
+    
+            var marker_43d39ed06717fe4161a21cdbdc7ac92f = L.marker(
+                [13.717143333333333, 79.58717833333333],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_b2087486c7a7175da9eced344ba5cab3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_00149bb7da2abf5ea22292cb7f498422 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a3aef0e15af18e6172886316d47502ac = $(`<div id="html_a3aef0e15af18e6172886316d47502ac" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             13         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:24:18.329000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905122425503.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905122425503.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_00149bb7da2abf5ea22292cb7f498422.setContent(html_a3aef0e15af18e6172886316d47502ac);
+            
+        
+
+        marker_43d39ed06717fe4161a21cdbdc7ac92f.bindPopup(popup_00149bb7da2abf5ea22292cb7f498422)
+        ;
+
+        
+    
+    
+            marker_43d39ed06717fe4161a21cdbdc7ac92f.bindTooltip(
+                `<div>
+                     13 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_43d39ed06717fe4161a21cdbdc7ac92f.setIcon(icon_b2087486c7a7175da9eced344ba5cab3);
+            
+    
+            var marker_d1702f856dcb54fcb0815a9f4c55ce5b = L.marker(
+                [13.716963333333336, 79.58705],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_6e1556eedeb0913e7f54f423a3179173 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d85ea5ef3878bd622c24aa019faf1410 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_985f5d6e0efc276908727346e9fcb55a = $(`<div id="html_985f5d6e0efc276908727346e9fcb55a" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             12         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:24:59.962000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905122508036.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905122508036.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_d85ea5ef3878bd622c24aa019faf1410.setContent(html_985f5d6e0efc276908727346e9fcb55a);
+            
+        
+
+        marker_d1702f856dcb54fcb0815a9f4c55ce5b.bindPopup(popup_d85ea5ef3878bd622c24aa019faf1410)
+        ;
+
+        
+    
+    
+            marker_d1702f856dcb54fcb0815a9f4c55ce5b.bindTooltip(
+                `<div>
+                     12 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d1702f856dcb54fcb0815a9f4c55ce5b.setIcon(icon_6e1556eedeb0913e7f54f423a3179173);
+            
+    
+            var marker_e74b57e1c65b521910d8be35c2f19abb = L.marker(
+                [13.717661666666665, 79.58739166666663],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_d43cadb49750e8fbcaf0329ad71c845c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8cc3a0d613ec0ad3cae1ce76236f3780 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3519de73c72b4218a75fc15cfeb3254c = $(`<div id="html_3519de73c72b4218a75fc15cfeb3254c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             10         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:27:46.166000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905122757264.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905122757264.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_8cc3a0d613ec0ad3cae1ce76236f3780.setContent(html_3519de73c72b4218a75fc15cfeb3254c);
+            
+        
+
+        marker_e74b57e1c65b521910d8be35c2f19abb.bindPopup(popup_8cc3a0d613ec0ad3cae1ce76236f3780)
+        ;
+
+        
+    
+    
+            marker_e74b57e1c65b521910d8be35c2f19abb.bindTooltip(
+                `<div>
+                     10 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e74b57e1c65b521910d8be35c2f19abb.setIcon(icon_d43cadb49750e8fbcaf0329ad71c845c);
+            
+    
+            var marker_9fdc6842c67decc5ab9e46a48e7e2250 = L.marker(
+                [13.716478333333333, 79.58849000000001],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_dc76134ec2aeef7dd6c5b09a327b0e7f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec35f70af2f4f6fbb313a0e0eab41b30 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0bc0809adc55282a35efcbd268613172 = $(`<div id="html_0bc0809adc55282a35efcbd268613172" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             9         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:33:23.298000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905123334028.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905123334028.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_ec35f70af2f4f6fbb313a0e0eab41b30.setContent(html_0bc0809adc55282a35efcbd268613172);
+            
+        
+
+        marker_9fdc6842c67decc5ab9e46a48e7e2250.bindPopup(popup_ec35f70af2f4f6fbb313a0e0eab41b30)
+        ;
+
+        
+    
+    
+            marker_9fdc6842c67decc5ab9e46a48e7e2250.bindTooltip(
+                `<div>
+                     9 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9fdc6842c67decc5ab9e46a48e7e2250.setIcon(icon_dc76134ec2aeef7dd6c5b09a327b0e7f);
+            
+    
+            var marker_6b5e2581124b3fcd9ece890bdb648bd2 = L.marker(
+                [13.715551666666666, 79.58858166666667],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_9dfddb4cf40fab5a08d4a8d9a5745527 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed013b8fd155ff1523bdbc79181d2f56 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6fd4295a7596089976f75efaf1a32339 = $(`<div id="html_6fd4295a7596089976f75efaf1a32339" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             8         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:35:25.739000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905123535120.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905123535120.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_ed013b8fd155ff1523bdbc79181d2f56.setContent(html_6fd4295a7596089976f75efaf1a32339);
+            
+        
+
+        marker_6b5e2581124b3fcd9ece890bdb648bd2.bindPopup(popup_ed013b8fd155ff1523bdbc79181d2f56)
+        ;
+
+        
+    
+    
+            marker_6b5e2581124b3fcd9ece890bdb648bd2.bindTooltip(
+                `<div>
+                     8 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b5e2581124b3fcd9ece890bdb648bd2.setIcon(icon_9dfddb4cf40fab5a08d4a8d9a5745527);
+            
+    
+            var marker_b5fb89001e048f25f0ef70f9508f427c = L.marker(
+                [13.714973333333331, 79.58922333333335],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_9598efacc5b3fea7a8b3d32837509dcb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba1203c86c4bae7f9af16f0f19120b33 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ffb40f291e6d5c6fec6c4cfb568d5dac = $(`<div id="html_ffb40f291e6d5c6fec6c4cfb568d5dac" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             7         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:37:47.916000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905123759021.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905123759021.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_ba1203c86c4bae7f9af16f0f19120b33.setContent(html_ffb40f291e6d5c6fec6c4cfb568d5dac);
+            
+        
+
+        marker_b5fb89001e048f25f0ef70f9508f427c.bindPopup(popup_ba1203c86c4bae7f9af16f0f19120b33)
+        ;
+
+        
+    
+    
+            marker_b5fb89001e048f25f0ef70f9508f427c.bindTooltip(
+                `<div>
+                     7 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b5fb89001e048f25f0ef70f9508f427c.setIcon(icon_9598efacc5b3fea7a8b3d32837509dcb);
+            
+    
+            var marker_bc53817fa2f40c6ddc4e29e17be1a028 = L.marker(
+                [13.712803333333332, 79.59171833333332],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_badf2eb0d7efb03944ab13a0be39cd3e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d287b753e1a65960e17013caec9eb30 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4845427f7afbaef123ed9d63eb3f4445 = $(`<div id="html_4845427f7afbaef123ed9d63eb3f4445" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             17         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:45:13.191000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905124555622.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905124555622.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_2d287b753e1a65960e17013caec9eb30.setContent(html_4845427f7afbaef123ed9d63eb3f4445);
+            
+        
+
+        marker_bc53817fa2f40c6ddc4e29e17be1a028.bindPopup(popup_2d287b753e1a65960e17013caec9eb30)
+        ;
+
+        
+    
+    
+            marker_bc53817fa2f40c6ddc4e29e17be1a028.bindTooltip(
+                `<div>
+                     17 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc53817fa2f40c6ddc4e29e17be1a028.setIcon(icon_badf2eb0d7efb03944ab13a0be39cd3e);
+            
+    
+            var marker_0dd73225a360c63f015c73932b280d1f = L.marker(
+                [13.711951666666664, 79.59160833333334],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_2cd677fe9741c0a62cc910b387976873 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b44cafcac4acb7d54f9ac8d490b45e73 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7e85d73651a579d473b612c23daadbe2 = $(`<div id="html_7e85d73651a579d473b612c23daadbe2" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             18         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:47:40.405000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905124759854.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905124759854.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_b44cafcac4acb7d54f9ac8d490b45e73.setContent(html_7e85d73651a579d473b612c23daadbe2);
+            
+        
+
+        marker_0dd73225a360c63f015c73932b280d1f.bindPopup(popup_b44cafcac4acb7d54f9ac8d490b45e73)
+        ;
+
+        
+    
+    
+            marker_0dd73225a360c63f015c73932b280d1f.bindTooltip(
+                `<div>
+                     18 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0dd73225a360c63f015c73932b280d1f.setIcon(icon_2cd677fe9741c0a62cc910b387976873);
+            
+    
+            var marker_40e0c1ddcc3704d51c12b8c1f90e6b79 = L.marker(
+                [13.712068333333333, 79.59237499999999],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_92105e2bd6b1d9c2ca203c2e70bb08af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e218569e5e44230f77ab31553c165b3d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_bf0b5d62ea4f2998f7782bd56cd6dce6 = $(`<div id="html_bf0b5d62ea4f2998f7782bd56cd6dce6" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             19         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:49:50.027000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905125002048.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905125002048.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_e218569e5e44230f77ab31553c165b3d.setContent(html_bf0b5d62ea4f2998f7782bd56cd6dce6);
+            
+        
+
+        marker_40e0c1ddcc3704d51c12b8c1f90e6b79.bindPopup(popup_e218569e5e44230f77ab31553c165b3d)
+        ;
+
+        
+    
+    
+            marker_40e0c1ddcc3704d51c12b8c1f90e6b79.bindTooltip(
+                `<div>
+                     19 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_40e0c1ddcc3704d51c12b8c1f90e6b79.setIcon(icon_92105e2bd6b1d9c2ca203c2e70bb08af);
+            
+    
+            var marker_db3cd161317bc05f082919e2f56daca4 = L.marker(
+                [13.711053333333332, 79.59231166666666],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_9948c91e28c44acdd282f82e252cd970 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1fe1b1edc0259633bebe9724a4753d29 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fdee5ba3a43f1a1af570a51e15b93cd1 = $(`<div id="html_fdee5ba3a43f1a1af570a51e15b93cd1" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             20         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:52:20.112000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905125227405.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905125227405.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_1fe1b1edc0259633bebe9724a4753d29.setContent(html_fdee5ba3a43f1a1af570a51e15b93cd1);
+            
+        
+
+        marker_db3cd161317bc05f082919e2f56daca4.bindPopup(popup_1fe1b1edc0259633bebe9724a4753d29)
+        ;
+
+        
+    
+    
+            marker_db3cd161317bc05f082919e2f56daca4.bindTooltip(
+                `<div>
+                     20 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_db3cd161317bc05f082919e2f56daca4.setIcon(icon_9948c91e28c44acdd282f82e252cd970);
+            
+    
+            var marker_1184b55c7cdbfcd231769aed6df67383 = L.marker(
+                [13.709819999999995, 79.59235],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_f511d862e6947bbe8a32e2bb195c63e2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1adda693a5fee475560d0995013f7bab = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4b582f64a813f56374a2f058d7083785 = $(`<div id="html_4b582f64a813f56374a2f058d7083785" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             21         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:55:00.087000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905125506419.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905125506419.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_1adda693a5fee475560d0995013f7bab.setContent(html_4b582f64a813f56374a2f058d7083785);
+            
+        
+
+        marker_1184b55c7cdbfcd231769aed6df67383.bindPopup(popup_1adda693a5fee475560d0995013f7bab)
+        ;
+
+        
+    
+    
+            marker_1184b55c7cdbfcd231769aed6df67383.bindTooltip(
+                `<div>
+                     21 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1184b55c7cdbfcd231769aed6df67383.setIcon(icon_f511d862e6947bbe8a32e2bb195c63e2);
+            
+    
+            var marker_42d955c2d7fd7c75642271191888e9da = L.marker(
+                [13.708343333333337, 79.59266833333332],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_71e743b9cf78dd0e232e0e5351e6ff3f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99531d03de4574d2d7e396a42b80f839 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e81b2d46a1f0b20d3772605372d6d762 = $(`<div id="html_e81b2d46a1f0b20d3772605372d6d762" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             22         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 12:58:09.293000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905125819332.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905125819332.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_99531d03de4574d2d7e396a42b80f839.setContent(html_e81b2d46a1f0b20d3772605372d6d762);
+            
+        
+
+        marker_42d955c2d7fd7c75642271191888e9da.bindPopup(popup_99531d03de4574d2d7e396a42b80f839)
+        ;
+
+        
+    
+    
+            marker_42d955c2d7fd7c75642271191888e9da.bindTooltip(
+                `<div>
+                     22 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_42d955c2d7fd7c75642271191888e9da.setIcon(icon_71e743b9cf78dd0e232e0e5351e6ff3f);
+            
+    
+            var marker_067917d5c826bd7ca588e20a05eddf74 = L.marker(
+                [13.707418333333331, 79.59289833333334],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_acd3c92cabf6be141c2fa39c892d48a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a231584ea86bcbf8183d28340ac41a15 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5bd5037c75ef120b9cd580225e30215f = $(`<div id="html_5bd5037c75ef120b9cd580225e30215f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             23         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Segregated (Wet)         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 13:00:28.426000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905130038907.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905130038907.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_a231584ea86bcbf8183d28340ac41a15.setContent(html_5bd5037c75ef120b9cd580225e30215f);
+            
+        
+
+        marker_067917d5c826bd7ca588e20a05eddf74.bindPopup(popup_a231584ea86bcbf8183d28340ac41a15)
+        ;
+
+        
+    
+    
+            marker_067917d5c826bd7ca588e20a05eddf74.bindTooltip(
+                `<div>
+                     23 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_067917d5c826bd7ca588e20a05eddf74.setIcon(icon_acd3c92cabf6be141c2fa39c892d48a3);
+            
+    
+            var marker_269777d7554127de0a3ffc73cb75575c = L.marker(
+                [13.70739166666667, 79.59291],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_f6b3f9bd9fc5c9a7018945684799a9f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0d5140e4c7abdfb66ec8c4bca40a4298 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_44bc1b2eaac81bae8018e6ce2999339d = $(`<div id="html_44bc1b2eaac81bae8018e6ce2999339d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             Bin #31         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> On road         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 13:00:42.951000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color:#922b21;">Not recorded</span>         </div>              </div>     </div>`)[0];
+                popup_0d5140e4c7abdfb66ec8c4bca40a4298.setContent(html_44bc1b2eaac81bae8018e6ce2999339d);
+            
+        
+
+        marker_269777d7554127de0a3ffc73cb75575c.bindPopup(popup_0d5140e4c7abdfb66ec8c4bca40a4298)
+        ;
+
+        
+    
+    
+            marker_269777d7554127de0a3ffc73cb75575c.bindTooltip(
+                `<div>
+                     Bin #31 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_269777d7554127de0a3ffc73cb75575c.setIcon(icon_f6b3f9bd9fc5c9a7018945684799a9f2);
+            
+    
+            var marker_75b4759e1039f9dd893aef6e1f4c79a7 = L.marker(
+                [13.707410000000001, 79.59294833333334],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_b978391cad8e0d53b3aef7bbff8eb736 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f63414d2cce97f145858f5efd361bfca = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b0fd956882f0a8f3c2756505bafe261e = $(`<div id="html_b0fd956882f0a8f3c2756505bafe261e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             24         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Segregated (Dry)         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 13:00:51.644000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905130104780.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905130104780.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_f63414d2cce97f145858f5efd361bfca.setContent(html_b0fd956882f0a8f3c2756505bafe261e);
+            
+        
+
+        marker_75b4759e1039f9dd893aef6e1f4c79a7.bindPopup(popup_f63414d2cce97f145858f5efd361bfca)
+        ;
+
+        
+    
+    
+            marker_75b4759e1039f9dd893aef6e1f4c79a7.bindTooltip(
+                `<div>
+                     24 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_75b4759e1039f9dd893aef6e1f4c79a7.setIcon(icon_b978391cad8e0d53b3aef7bbff8eb736);
+            
+    
+            var marker_0f921f2985913803b0710a63dc07c39a = L.marker(
+                [13.707331666666668, 79.59293666666667],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_4e8fcbf1576c05a1fc92a8ab559d3d58 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b30dc2caa450dff9cb54015004997de3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_326ba0bd9797f92f7914cdd41eb03822 = $(`<div id="html_326ba0bd9797f92f7914cdd41eb03822" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             26         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Segregated (Dry)         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 13:01:21.169000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905130133583.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905130133583.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_b30dc2caa450dff9cb54015004997de3.setContent(html_326ba0bd9797f92f7914cdd41eb03822);
+            
+        
+
+        marker_0f921f2985913803b0710a63dc07c39a.bindPopup(popup_b30dc2caa450dff9cb54015004997de3)
+        ;
+
+        
+    
+    
+            marker_0f921f2985913803b0710a63dc07c39a.bindTooltip(
+                `<div>
+                     26 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0f921f2985913803b0710a63dc07c39a.setIcon(icon_4e8fcbf1576c05a1fc92a8ab559d3d58);
+            
+    
+            var marker_29114831bebde314fead3ad4c5d447e1 = L.marker(
+                [13.707336666666665, 79.59290666666668],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_31ee9d4102aeeea477355382b3db2134 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_37cf5ed09cb1d7cfe9f6e7c2e15b3f2a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f89ed84a43ca4faeb412ca10e2fdec5f = $(`<div id="html_f89ed84a43ca4faeb412ca10e2fdec5f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             25         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Segregated (Wet)         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 13:01:43.385000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905130153973.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905130153973.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_37cf5ed09cb1d7cfe9f6e7c2e15b3f2a.setContent(html_f89ed84a43ca4faeb412ca10e2fdec5f);
+            
+        
+
+        marker_29114831bebde314fead3ad4c5d447e1.bindPopup(popup_37cf5ed09cb1d7cfe9f6e7c2e15b3f2a)
+        ;
+
+        
+    
+    
+            marker_29114831bebde314fead3ad4c5d447e1.bindTooltip(
+                `<div>
+                     25 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_29114831bebde314fead3ad4c5d447e1.setIcon(icon_31ee9d4102aeeea477355382b3db2134);
+            
+    
+            var marker_08a715380769fc8a938ca103a3b48499 = L.marker(
+                [13.707151666666668, 79.59277999999999],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_6ff08af97d45f8f49912a4101912deba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2e2dccf2eb545cc88fa7b27a9bbd59da = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f7d29de41a0a8c28bcfc33c1d504ca39 = $(`<div id="html_f7d29de41a0a8c28bcfc33c1d504ca39" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             27         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-05 13:02:20.802000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260905130229245.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260905130229245.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_2e2dccf2eb545cc88fa7b27a9bbd59da.setContent(html_f7d29de41a0a8c28bcfc33c1d504ca39);
+            
+        
+
+        marker_08a715380769fc8a938ca103a3b48499.bindPopup(popup_2e2dccf2eb545cc88fa7b27a9bbd59da)
+        ;
+
+        
+    
+    
+            marker_08a715380769fc8a938ca103a3b48499.bindTooltip(
+                `<div>
+                     27 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_08a715380769fc8a938ca103a3b48499.setIcon(icon_6ff08af97d45f8f49912a4101912deba);
+            
+    
+            var marker_9dad3f3bbe181cc3940c2e7d44c79032 = L.marker(
+                [13.708898333333329, 79.59389333333334],
+                {
+}
+            ).addTo(marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d);
+        
+    
+            var icon_2d3e9b6b300b1daa4f7840b4efb0bb5c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4339c497d145cf2c03d94f928fbe05d2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c99fe52760d42f4246f4feabe67098a5 = $(`<div id="html_c99fe52760d42f4246f4feabe67098a5" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 220px;">         <h4 style="margin: 0 0 6px 0; color: #1a5276;                    border-bottom: 2px solid #2980b9; padding-bottom: 3px;">             35         </h4>         <p style="margin: 3px 0; font-size: 12px;">             <b>Student:</b> Collected by: Roll No. hs25m105         </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Notes:</b> Single dustbin          </p>         <p style="margin: 3px 0; font-size: 12px;">             <b>Timestamp:</b> 2026-09-06 08:50:35.952000+00:00         </p>                  <div style="margin-top: 8px; padding: 6px;                     background-color: #f2f4f4;                     border: 1px solid #d5dbdb; border-radius: 4px;                     font-size: 11px;">             <b> Photo Attachment:</b><br>             <span style="color: #2e4053; word-break: break-all;">                 <code>JPEG_20260906085118418.jpg</code>             </span>             <br>             <img src="file:///C:/Users/KANCH/OneDrive/UISA_26/DCIM/JPEG_20260906085118418.jpg"                  alt="Waste bin photo"                  style="display:block; width:100%; max-height:220px;                         object-fit:contain; margin-top:6px;"                  onerror="this.style.display='none';                           this.nextElementSibling.style.display='block';">             <span style="display:none; color:#922b21;">                 Image blocked by browser security settings.             </span>         </div>              </div>     </div>`)[0];
+                popup_4339c497d145cf2c03d94f928fbe05d2.setContent(html_c99fe52760d42f4246f4feabe67098a5);
+            
+        
+
+        marker_9dad3f3bbe181cc3940c2e7d44c79032.bindPopup(popup_4339c497d145cf2c03d94f928fbe05d2)
+        ;
+
+        
+    
+    
+            marker_9dad3f3bbe181cc3940c2e7d44c79032.bindTooltip(
+                `<div>
+                     35 (Collected by: Roll No. hs25m105)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9dad3f3bbe181cc3940c2e7d44c79032.setIcon(icon_2d3e9b6b300b1daa4f7840b4efb0bb5c);
+            
+    
+            marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d.addTo(map_7ce5a30f6e364b5ae3e5d92cb647e3ed);
+        
+    
+            var layer_control_ec9724dc863ccde154b69a2ffc12c3f3_layers = {
+                base_layers : {
+                    "CartoDB Light Map" : tile_layer_287d1864d2f49cec8ad44d5bce6fe54a,
+                    "Esri Satellite" : tile_layer_fefefcc9ec8c4b87fde6923336674518,
+                },
+                overlays :  {
+                    "Waste Bins" : marker_cluster_0350ad5dc50d3e868ce58843a68cfa0d,
+                },
+            };
+            let layer_control_ec9724dc863ccde154b69a2ffc12c3f3 = L.control.layers(
+                layer_control_ec9724dc863ccde154b69a2ffc12c3f3_layers.base_layers,
+                layer_control_ec9724dc863ccde154b69a2ffc12c3f3_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_7ce5a30f6e364b5ae3e5d92cb647e3ed);
+
+        
+</script>
+</html>
